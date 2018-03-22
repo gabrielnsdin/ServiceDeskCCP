@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.usjt.deskwebmob.servicedeskcco3an_mca1.controller.MainActivity">
+
+    <EditText
+        android:id="@+id/busca_fila"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/busca_fila"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/botao_busca"
+        android:onClick="buscarChamados"/>
+
+</LinearLayout>
+
+
+
+    <!--android:paddingBottom="@dimens/activity_vertical_margin"-->
+    <!--android:paddingLeft="@dimens/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimens/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimens/activity_vertical_margin"-->
+
+    <!--android:layout_weight="1"-->
