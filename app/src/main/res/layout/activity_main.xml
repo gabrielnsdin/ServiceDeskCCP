@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.usjt.deskwebmob.servicedeskcco3an_mca1.controller.MainActivity">
+    tools:context="deswebmob.ftce.usjt.br.servicedesk.controller.MainActivity">
 
     <EditText
         android:id="@+id/busca_fila"
@@ -20,11 +20,3 @@
 
 </LinearLayout>
 
-
-
-    <!--android:paddingBottom="@dimens/activity_vertical_margin"-->
-    <!--android:paddingLeft="@dimens/activity_horizontal_margin"-->
-    <!--android:paddingRight="@dimens/activity_horizontal_margin"-->
-    <!--android:paddingTop="@dimens/activity_vertical_margin"-->
-
-    <!--android:layout_weight="1"-->

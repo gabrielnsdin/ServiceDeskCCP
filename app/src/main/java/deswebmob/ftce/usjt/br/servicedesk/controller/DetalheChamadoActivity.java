@@ -17,7 +17,6 @@ import static deswebmob.ftce.usjt.br.servicedesk.controller.ListarChamadosActivi
  * @author Gabriel do Nascimento 816113722
  */
 public class DetalheChamadoActivity extends Activity {
-    TextView txtNome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -8,7 +8,6 @@ import java.util.Date;
  */
 
 public class Chamado implements Serializable{
-
     private int numero;
     private Date dataAbertura,dataFechamento;
     private String status , descricao ;
@@ -17,6 +16,8 @@ public class Chamado implements Serializable{
     public  static  final String ABERTO = "aberto";
     public  static  final String FECHADO = "fechado";
 
+    public Chamado() {
+    }
 
     public Chamado(int numero, Date dataAbertura, Date dataFechamento, String status, String descricao, Fila fila) {
         this.numero = numero;
@@ -25,9 +26,6 @@ public class Chamado implements Serializable{
         this.status = status;
         this.descricao = descricao;
         this.fila = fila;
-    }
-
-    public Chamado() {
     }
 
     public int getNumero() {
@@ -80,6 +78,13 @@ public class Chamado implements Serializable{
 
     @Override
     public String toString() {
-        return fila.getNome() + descricao;
+        return "Chamado{" +
+                "numero=" + numero +
+                ", dataAbertura=" + dataAbertura +
+                ", dataFechamento=" + dataFechamento +
+                ", status='" + status + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", fila=" + fila +
+                '}';
     }
 }

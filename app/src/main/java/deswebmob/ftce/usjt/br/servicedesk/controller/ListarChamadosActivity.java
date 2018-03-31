@@ -17,37 +17,33 @@ import deswebmob.ftce.usjt.br.servicedesk.model.Data;
  * @author Gabriel do Nascimento 816113722
  */
 public class ListarChamadosActivity extends Activity {
-    public  static  final  String CHAMADO = "br.usjt.deswebmob.servicedesk.chamado";
+    public static final String CHAMADO = "br.usjt.deswebmob.servicedesk.chamado";
     ArrayList<Chamado> chamados;
     ListView listView;
     Activity contexto;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_chamados);
         Intent intent = getIntent();
-        String nomeFila = intent.getStringExtra(MainActivity.FILA);
-        chamados = Data.buscarChamados(nomeFila);
+        chamados = (ArrayList<Chamado>)intent.getSerializableExtra(MainActivity.CHAMADOS);
         listView = findViewById(R.id.lista_chamados);
-        ChamadoAdapter adapter = new ChamadoAdapter(this,chamados);
-
-//                new ArrayAdapter<Chamado>(this,
-//                android.R.layout.simple_list_item_1,chamados);
+        ChamadoAdapter adapter = new ChamadoAdapter(this, chamados);
         listView.setAdapter(adapter);
         contexto = this;
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-                @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int positon, long id){
-                    Chamado chamado = chamados.get(positon);
-                    Intent intent1 = new Intent( contexto ,DetalheChamadoActivity.class);
-                    intent1.putExtra(CHAMADO,chamado.getDescricao());
-                    startActivity(intent1);
-                }
-            }
-        );
 
-    };
+        listView.setOnItemClickListener(
+                new AdapterView.OnItemClickListener() {
+
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Chamado chamado = chamados.get(position);
+                        Intent intent1 = new Intent(contexto , DetalheChamadoActivity.class);
+                        intent1.putExtra(CHAMADO, chamado);
+                        startActivity(intent1);
+                    }
+                }
+        );
+    }
 }

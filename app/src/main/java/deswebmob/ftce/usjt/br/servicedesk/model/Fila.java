@@ -7,9 +7,8 @@ import java.io.Serializable;
  */
 
 public class Fila implements Serializable{
-    private  int id ;
-    private  String nome;
-    private  String figura;
+    private int id;
+    private String nome, figura;
 
     public Fila(int id, String nome, String figura) {
         this.id = id;
@@ -19,7 +18,6 @@ public class Fila implements Serializable{
 
     public Fila() {
     }
-
 
     public int getId() {
         return id;

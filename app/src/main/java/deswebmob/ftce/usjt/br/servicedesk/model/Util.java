@@ -12,10 +12,10 @@ import deswebmob.ftce.usjt.br.servicedesk.R;
  */
 
 public class Util {
-    public static Drawable getDrawableDinamic(Context contexto, String nomeImage){
+    public static Drawable getDrawableDinamic(Context contexto, String nomeImagem){
         Class<?> c = R.drawable.class;
         try {
-            Field idField = c.getDeclaredField(nomeImage);
+            Field idField = c.getDeclaredField(nomeImagem);
             int id = idField.getInt(idField);
             return contexto.getResources().getDrawable(id, null);
         } catch (NoSuchFieldException e) {
